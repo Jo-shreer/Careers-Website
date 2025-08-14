@@ -2,10 +2,27 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+JOBS = [{
+    'id': 1,
+    'Title': 'Python Developer',
+    'Location': 'Dublin',
+    'Salary': '50k'
+}, {
+    'id': 2,
+    'Title': 'Full Stack Developer',
+    'Location': 'Dublin',
+    'Salary': '70k'
+}, {
+    'id': 3,
+    'Title': 'Backend Developer',
+    'Location': 'Dublin',
+    'Salary': '70k'
+}]
+
 
 @app.get("/")
 def hello_world():
-    return render_template('home.html')
+    return render_template('home.html', jobs=JOBS)
 
 
 @app.post("/post")

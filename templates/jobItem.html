@@ -1,0 +1,10 @@
+<div class="border-bottom" style="margin-bottom:16px">
+  <h4 
+    style=color:rgb(120,120,120), "margin-bottom:4px>    
+    {{job['Title']}}
+  </h4>
+  Location: {{job['Location']}}
+    {% if 'Salary' in job %}
+      <h6 style=color:rgb(220,220,220), "margin-bottom:4px>Salary: {{job['Salary']}}</h6>
+  {% endif %}
+</div>
