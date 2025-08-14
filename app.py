@@ -10,7 +10,7 @@ def hello_world():
 
 if __name__ == "__main__":
     print("I am inside")
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0', port=6000, debug=True)
 
 # Main Python application
 print("Hello, Python!")
