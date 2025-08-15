@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
@@ -28,6 +28,11 @@ def hello_world():
 @app.post("/post")
 def get():
     return "Hello World"
+
+
+@app.route("/api/jobs")
+def getall():
+    return jsonify(JOBS)
 
 
 if __name__ == "__main__":
